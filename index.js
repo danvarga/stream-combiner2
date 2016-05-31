@@ -24,10 +24,6 @@ module.exports.obj = function () {
 
   
 function combine (streams, opts) {
-
-  for (var i = 0; i < streams.length; i++)
-    streams[i] = wrap(streams[i], opts)
-
   if(streams.length == 0)
     return new PassThrough(opts)
   else if(streams.length == 1)
